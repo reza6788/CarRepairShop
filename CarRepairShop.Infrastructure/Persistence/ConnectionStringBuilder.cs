@@ -6,11 +6,6 @@ public class ConnectionStringBuilder
     private const string DataBaseName = "CarRepairShop";
     private const string Username = "sa";
     private const string Password = "!bU9r5@M";
-    
-    // private const string ServerAddress = "192.168.40.50,16435";
-    // private const string DataBaseName = "ReportingTool";
-    // private const string Username = "sa";
-    // private const string Password = "2c3ivEnC7BrrWYHV3vSG";
 
     private static string BuildMyConnectionString(string serverAddress = "", string dataBaseName = "",
         string userName = "", string password = "")
