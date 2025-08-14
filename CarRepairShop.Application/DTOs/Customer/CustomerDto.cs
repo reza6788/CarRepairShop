@@ -1,5 +1,4 @@
 ﻿using CarRepairShop.Application.DTOs.Vehicle;
-using CarRepairShop.Domain.ValueObjects;
 
 namespace CarRepairShop.Application.DTOs.Customer;
 

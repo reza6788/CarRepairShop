@@ -10,7 +10,7 @@ using CarRepairShop.Infrastructure.Persistence.Repositories;
 using FluentValidation;
 using MediatR;
 using Microsoft.OpenApi.Models;
-using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();

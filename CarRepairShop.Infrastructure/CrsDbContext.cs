@@ -1,4 +1,6 @@
-﻿using CarRepairShop.Domain.Entities;
+﻿using CarRepairShop.Domain.Aggregates.CustomerAggregate;
+using CarRepairShop.Domain.Aggregates.MechanicAggregate;
+using CarRepairShop.Domain.Aggregates.RepairOrderAggregate;
 using CarRepairShop.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 

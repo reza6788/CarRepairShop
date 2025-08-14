@@ -1,6 +1,6 @@
 ﻿using CarRepairShop.Domain.ValueObjects;
 
-namespace CarRepairShop.Domain.Entities;
+namespace CarRepairShop.Domain.Aggregates.MechanicAggregate;
 
 public class MechanicEntity : BaseEntity
 {

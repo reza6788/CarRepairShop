@@ -1,4 +1,4 @@
-﻿using CarRepairShop.Domain.Entities;
+﻿using CarRepairShop.Domain.Aggregates.RepairOrderAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

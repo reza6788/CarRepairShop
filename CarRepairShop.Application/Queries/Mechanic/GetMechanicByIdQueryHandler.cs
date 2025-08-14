@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using CarRepairShop.Application.DTOs.Mechanic;
-using CarRepairShop.Domain.Entities;
+using CarRepairShop.Domain.Aggregates.MechanicAggregate;
 using CarRepairShop.Domain.Interfaces;
 using MediatR;
 

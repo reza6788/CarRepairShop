@@ -1,6 +1,4 @@
-﻿using CarRepairShop.Domain.ValueObjects;
-
-namespace CarRepairShop.Application.DTOs.RepairOrder;
+﻿namespace CarRepairShop.Application.DTOs.RepairOrder;
 
 public class CreateRepairOrderDto
 {

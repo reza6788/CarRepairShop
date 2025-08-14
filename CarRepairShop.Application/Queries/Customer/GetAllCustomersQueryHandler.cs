@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using CarRepairShop.Application.DTOs.Customer;
-using CarRepairShop.Application.DTOs.Vehicle;
-using CarRepairShop.Domain.Entities;
 using CarRepairShop.Domain.Interfaces;
-using CarRepairShop.Domain.ValueObjects;
 using MediatR;
 
 namespace CarRepairShop.Application.Queries.Customer;

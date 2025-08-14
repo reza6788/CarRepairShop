@@ -1,7 +1,6 @@
-﻿using System.Security.AccessControl;
-using CarRepairShop.Domain.ValueObjects;
+﻿using CarRepairShop.Domain.ValueObjects;
 
-namespace CarRepairShop.Domain.Entities;
+namespace CarRepairShop.Domain.Aggregates.CustomerAggregate;
 
 public class CustomerEntity : BaseEntity
 {

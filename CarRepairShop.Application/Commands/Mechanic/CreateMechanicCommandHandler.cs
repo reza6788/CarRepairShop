@@ -1,5 +1,5 @@
 ﻿using CarRepairShop.Application.Interfaces;
-using CarRepairShop.Domain.Entities;
+using CarRepairShop.Domain.Aggregates.MechanicAggregate;
 using CarRepairShop.Domain.Interfaces;
 using CarRepairShop.Domain.ValueObjects;
 using MediatR;

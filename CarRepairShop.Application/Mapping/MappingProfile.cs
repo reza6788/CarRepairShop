@@ -3,7 +3,9 @@ using CarRepairShop.Application.DTOs.Customer;
 using CarRepairShop.Application.DTOs.Mechanic;
 using CarRepairShop.Application.DTOs.RepairOrder;
 using CarRepairShop.Application.DTOs.Vehicle;
-using CarRepairShop.Domain.Entities;
+using CarRepairShop.Domain.Aggregates.CustomerAggregate;
+using CarRepairShop.Domain.Aggregates.MechanicAggregate;
+using CarRepairShop.Domain.Aggregates.RepairOrderAggregate;
 
 namespace CarRepairShop.Application.Mapping;
 

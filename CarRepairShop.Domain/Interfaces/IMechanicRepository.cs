@@ -1,4 +1,4 @@
-﻿using CarRepairShop.Domain.Entities;
+﻿using CarRepairShop.Domain.Aggregates.MechanicAggregate;
 
 namespace CarRepairShop.Domain.Interfaces;
 

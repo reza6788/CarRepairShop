@@ -1,6 +1,8 @@
-﻿using CarRepairShop.Domain.ValueObjects;
+﻿using CarRepairShop.Domain.Aggregates.CustomerAggregate;
+using CarRepairShop.Domain.Aggregates.MechanicAggregate;
+using CarRepairShop.Domain.ValueObjects;
 
-namespace CarRepairShop.Domain.Entities;
+namespace CarRepairShop.Domain.Aggregates.RepairOrderAggregate;
 
 public class RepairOrderEntity : BaseEntity
 {
