@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5188",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SQLSERVER_DATABASE": "CarRepairShop",
+        "SQLSERVER_PORT": "",
+        "SQLSERVER_PASSWORD": "!bU9r5@M",
+        "SQLSERVER_SERVER": ".",
+        "SQLSERVER_USERNAME": "sa"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "https://localhost:7253;http://localhost:5188",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SQLSERVER_DATABASE": "CarRepairShop",
+        "SQLSERVER_PORT": "",
+        "SQLSERVER_PASSWORD": "!bU9r5@M",
+        "SQLSERVER_SERVER": ".",
+        "SQLSERVER_USERNAME": "sa"
+      }
+    }
+  }
+}

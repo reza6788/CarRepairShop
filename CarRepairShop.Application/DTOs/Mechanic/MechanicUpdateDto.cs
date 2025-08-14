@@ -1,0 +1,9 @@
+﻿namespace CarRepairShop.Application.DTOs.Mechanic;
+
+public class MechanicUpdateDto
+{
+    public Guid Id { get; set; }
+    public string FirstName { get; set; } = string.Empty;
+    public string LastName { get; set; } = string.Empty;
+    public string Specialty { get; set; } = string.Empty;
+}
