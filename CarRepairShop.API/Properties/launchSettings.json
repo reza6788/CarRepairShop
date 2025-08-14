@@ -26,7 +26,16 @@
         "SQLSERVER_PORT": "",
         "SQLSERVER_PASSWORD": "!bU9r5@M",
         "SQLSERVER_SERVER": ".",
-        "SQLSERVER_USERNAME": "sa"
+        "SQLSERVER_USERNAME": "sa",
+        "SMTP_FromEmail": "",
+        "SMTP_FromName": "",
+        "SMTP_HOST": "",
+        "SMTP_PORT": "",
+        "SMTP_USERNAME": "",
+        "SMTP_PASSWORD": "",
+        "SMTP_ENABLE_SSL": "",
+        "Send_Notification_Customer": "false",
+        "Notification_Customer_To": ""
       }
     }
   }

@@ -3,6 +3,8 @@ using CarRepairShop.Application.Behaviors;
 using CarRepairShop.Application.Commands.Customer;
 using CarRepairShop.Application.Interfaces;
 using CarRepairShop.Application.Mapping;
+using CarRepairShop.Application.Services.Email;
+using CarRepairShop.Application.Services.Models;
 using CarRepairShop.Domain.Interfaces;
 using CarRepairShop.Infrastructure;
 using CarRepairShop.Infrastructure.Persistence;
@@ -42,12 +44,27 @@ builder.Services.AddMediatR(cfg =>
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
+var smtpSettings = new SmtpSettings
+{
+    FromEmail = builder.Configuration["SMTP_FromEmail"] ?? "",
+    FromName = builder.Configuration["SMTP_FromName"] ?? "",
+    Host = builder.Configuration["SMTP_HOST"] ?? "",
+    Port = int.TryParse(builder.Configuration["SMTP_PORT"], out var port) ? port : 25,
+    Username = builder.Configuration["SMTP_USERNAME"] ?? "",
+    Password = builder.Configuration["SMTP_PASSWORD"] ?? "",
+    EnableSsl = bool.TryParse(builder.Configuration["SMTP_ENABLE_SSL"], out var ssl) && ssl
+};
+
+builder.Services.AddSingleton(smtpSettings);
+
+
 // DI setup
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IMechanicRepository, MechanicRepository>();
 builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
 builder.Services.AddScoped<IRepairOrderRepository, RepairOrderRepository>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 
 //Register Unit of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

@@ -119,7 +119,7 @@ namespace CarRepairShop.Infrastructure.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Vehicles_CustomerId",
                 table: "Vehicles",
-                column: "CustomerId");
+                column: "RepairOrderId");
         }
 
         /// <inheritdoc />

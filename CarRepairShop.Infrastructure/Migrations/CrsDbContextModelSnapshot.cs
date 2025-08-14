@@ -128,7 +128,7 @@ namespace CarRepairShop.Infrastructure.Migrations
                     b.Property<DateTime>("CreateDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("CustomerId")
+                    b.Property<Guid>("RepairOrderId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DeleteDateTime")
@@ -155,7 +155,7 @@ namespace CarRepairShop.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("RepairOrderId");
 
                     b.ToTable("Vehicles");
                 });
@@ -265,7 +265,7 @@ namespace CarRepairShop.Infrastructure.Migrations
                 {
                     b.HasOne("CarRepairShop.Domain.Entities.CustomerEntity", "Customer")
                         .WithMany("Vehicles")
-                        .HasForeignKey("CustomerId")
+                        .HasForeignKey("RepairOrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

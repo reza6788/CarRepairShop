@@ -1,5 +1,6 @@
 ﻿using CarRepairShop.Application.Interfaces;
 using CarRepairShop.Domain.Aggregates.CustomerAggregate;
+using CarRepairShop.Domain.Events.Customer;
 using CarRepairShop.Domain.Interfaces;
 using CarRepairShop.Domain.ValueObjects;
 using MediatR;
@@ -10,11 +11,15 @@ public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerComman
 {
     private readonly IGenericRepository<CustomerEntity> _repository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IMediator _mediator;
 
-    public CreateCustomerCommandHandler(IGenericRepository<CustomerEntity> repository, IUnitOfWork unitOfWork)
+    public CreateCustomerCommandHandler(IGenericRepository<CustomerEntity> repository,
+        IUnitOfWork unitOfWork,
+        IMediator mediator)
     {
         _repository = repository;
         _unitOfWork = unitOfWork;
+        _mediator = mediator;
     }
 
     public async Task<Guid> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
@@ -23,6 +28,9 @@ public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerComman
         var customer = new CustomerEntity(fullName, request.Customer.PhoneNumber);
         await _repository.AddAsync(customer, cancellationToken);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        await _mediator.Publish(new CreateCustomerEvent(customer.Id, fullName.FirstName + " " + fullName.LastName), cancellationToken);
+        
         return customer.Id;
     }
 }
