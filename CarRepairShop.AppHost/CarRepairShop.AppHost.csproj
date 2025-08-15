@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Sdk Name="Aspire.AppHost.Sdk" Version="9.4.1"/>
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <UserSecretsId>c2635e2b-b499-41e9-85bc-9843670c36a5</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CarRepairShop.API\CarRepairShop.API.csproj" />
+      <ProjectReference Include="..\CarRepairShop.App\CarRepairShop.App.csproj" />
+    </ItemGroup>
+
+</Project>
